@@ -1,0 +1,35 @@
+@use 'links';
+@use 'colors';
+
+#nav-container{
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    padding: 10px;
+    color: colors.$secondary-red;
+    background-color: colors.$background-color;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-bottom: 1px solid colors.$secondary-red;
+
+    a, a:visited{
+        text-decoration: none;
+        }
+    a:hover{
+        text-decoration: underline;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        
+        li{
+            margin: 0 15px;
+            }
+        }
+
+}
+
+

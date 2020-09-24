@@ -1,0 +1,38 @@
+@use 'navigation';
+@use 'colors';
+@use 'fonts';
+@use 'headings';
+@use 'links';
+@use 'landing';
+@use 'about-intro';
+@use 'project-intro';
+@use 'contacts';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  
+}
+
+
+body{
+  font-family: fonts.$font-family;
+  background-color: colors.$background-color;
+  color: colors.$main-dark;
+  transition: 500ms;
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
+  -ms-transition: 500ms;
+  -o-transition: 500ms;
+}
+
+strong {
+  color: colors.$secondary-red;
+}
+
+
+
+
+

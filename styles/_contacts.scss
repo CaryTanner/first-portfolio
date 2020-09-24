@@ -1,0 +1,12 @@
+#contacts-container{
+    text-align: center;
+    padding: 20px;
+    #contact-items-container{
+        display: flex;
+        justify-content: space-evenly;
+    img{
+        width: 80px;
+        margin: 1rem 0 -1rem 0  ;
+    }
+}
+}

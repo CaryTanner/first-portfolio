@@ -1,0 +1,39 @@
+@use 'buttons';
+@use 'colors';
+
+#landing-projects{
+    position: relative;
+    top: 35vh;
+    display: flex;
+    margin-bottom: 5rem;  
+    div{
+        width: 100%;
+        button {
+            @include buttons.main-button;
+            margin: 3rem auto;
+            
+          }
+    }
+    h2 {
+        font-size: 4.5rem;
+        letter-spacing: 1.3;
+        line-height: 0.9;
+      }
+}
+#thumbs-button{
+    display:flex;
+    flex-direction: column;
+}
+ #thumbs-container{
+     display: flex;
+     justify-content: space-evenly;
+ }
+
+
+.project-thumbnail{
+    width: 200px;
+    // height: fit-content;
+    border: 1px solid colors.$main-dark;
+  }
+
+  
