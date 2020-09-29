@@ -3,7 +3,6 @@
 #landing-container {
   overflow-x: hidden;
   width: 100%;
-
   padding: 5rem 2rem 0 2rem;
   background-image: url("./images/pexels-polina-tankilevitch-4110404-blend3.jpg");
   background-size: cover;
@@ -54,4 +53,13 @@
   }
   }
   
+}
+@media (max-width: 450px) {
+  #landing-container{
+    
+    #web-opener-title{ 
+      font-size: 4.3rem;
+  }
+  }
+
 }

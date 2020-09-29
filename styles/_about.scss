@@ -30,6 +30,8 @@
       @extend .container;
       flex-direction: column;
       justify-content: space-evenly;
+      margin: 0 1rem;
+      text-align: center;
     img {
       align-self: center;
       width: 250px;
@@ -37,3 +39,17 @@
     }
   }
 }
+
+#cv-float{
+  position: absolute;
+  right: 5%;
+  top: 12%;
+
+
+}
+
+.download-img{
+  height: 1.5ch;
+}
+
+
