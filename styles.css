@@ -31,6 +31,8 @@ a.active {
   position: fixed;
   z-index: 99;
   width: 100%;
+  height: 50px;
+  overflow-x: hidden;
   padding: 10px;
   color: #7f1114;
   background-color: #e1e1df;
@@ -38,6 +40,11 @@ a.active {
   font-size: 1.5rem;
   text-decoration: none;
   border-bottom: 1px solid #7f1114;
+  transition: all ease-in 500ms;
+  -webkit-transition: all ease-in 500ms;
+  -moz-transition: all ease-in 500ms;
+  -ms-transition: all ease-in 500ms;
+  -o-transition: all ease-in 500ms;
 }
 #nav-container a, #nav-container a:visited {
   text-decoration: none;
@@ -55,7 +62,7 @@ a.active {
   background-color: #e1e1df;
   border: none;
   position: absolute;
-  right: 2rem;
+  right: 1rem;
 }
 #nav-container svg {
   background-color: #e1e1df;
@@ -69,8 +76,7 @@ a.active {
 }
 
 .hide {
-  height: 200px;
-  overflow: hidden;
+  min-height: 200px;
 }
 
 h1 {
@@ -88,7 +94,7 @@ h3 {
 #landing-container {
   overflow-x: hidden;
   width: 100%;
-  padding: 2rem;
+  padding: 5rem 2rem 0 2rem;
   background-image: url("./images/pexels-polina-tankilevitch-4110404-blend3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -96,7 +102,7 @@ h3 {
 }
 #landing-container #what-opener-title {
   font-size: 3rem;
-  margin: 3rem 0 3rem 0;
+  margin: 0 0 3rem 0;
   font-weight: bold;
   line-height: 0.9;
 }
@@ -114,6 +120,21 @@ h3 {
   line-height: 0.8;
 }
 
+@media (max-width: 700px) {
+  #landing-container {
+    padding: 5rem 0.7rem 0 0.7rem;
+    background-size: contain;
+  }
+  #landing-container #what-opener-title {
+    font-size: 2rem;
+  }
+  #landing-container h3 {
+    font-size: 1.5rem;
+  }
+  #landing-container #web-opener-title {
+    font-size: 4rem;
+  }
+}
 #landing-about {
   position: relative;
   top: 25vh;
@@ -147,7 +168,6 @@ h3 {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  margin: -0.5rem 0 1rem 0;
   max-width: 150px;
 }
 #landing-about button:hover {
@@ -159,6 +179,9 @@ h3 {
   -o-transform: scale(1.05);
 }
 @media (max-width: 500px) {
+  #landing-about h2 {
+    font-size: 3.5rem;
+  }
   #landing-about #about-intro-para::before {
     display: none;
   }
@@ -183,6 +206,11 @@ h3 {
   shape-outside: polygon(-21px 241px, -63px 248px, 99.2% 96.8%, 296px -8px);
 }
 
+@media (max-width: 500px) {
+  #landing-about {
+    align-items: center;
+  }
+}
 #landing-projects {
   position: relative;
   top: 35vh;
@@ -312,11 +340,6 @@ body {
   font-family: "poppins", sans-serif;
   background-color: #e1e1df;
   color: #130a0b;
-  transition: 500ms;
-  -webkit-transition: 500ms;
-  -moz-transition: 500ms;
-  -ms-transition: 500ms;
-  -o-transition: 500ms;
 }
 
 strong {
