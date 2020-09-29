@@ -17,11 +17,10 @@
         font-size: 1.5rem;
         text-decoration: none;
         border-bottom: 1px solid colors.$secondary-red;
-        transition: all ease-in 500ms;
-        -webkit-transition: all ease-in 500ms;
-        -moz-transition: all ease-in 500ms;
-        -ms-transition: all ease-in 500ms;
-        -o-transition: all ease-in 500ms;
+        -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
     
     a,a:visited {
         text-decoration: none;
@@ -48,13 +47,7 @@
         
     }
 
-    svg {
-        background-color: colors.$background-color;
-        cursor: pointer; 
-        fill: colors.$main-red;
-      }
-
-      
+    
 
         @media (min-width: 700px) {
             button{

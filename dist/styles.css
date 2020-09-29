@@ -40,11 +40,10 @@ a.active {
   font-size: 1.5rem;
   text-decoration: none;
   border-bottom: 1px solid #7f1114;
-  transition: all ease-in 500ms;
-  -webkit-transition: all ease-in 500ms;
-  -moz-transition: all ease-in 500ms;
-  -ms-transition: all ease-in 500ms;
-  -o-transition: all ease-in 500ms;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 #nav-container a, #nav-container a:visited {
   text-decoration: none;
@@ -63,11 +62,6 @@ a.active {
   border: none;
   position: absolute;
   right: 1rem;
-}
-#nav-container svg {
-  background-color: #e1e1df;
-  cursor: pointer;
-  fill: #b42c2c;
 }
 @media (min-width: 700px) {
   #nav-container button {
