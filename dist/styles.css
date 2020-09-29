@@ -16,12 +16,12 @@ a.active {
   font-weight: bold;
 }
 
-.container, #about-page, #about-page #about-photos, #projects-page, #projects-page #about-photos, #contacts #contact-items-container, #landing-projects, #nav-container, #nav-container ul {
+.container, #about-page, #about-page #about-photos, #contacts #contact-items-container, #landing-projects, #nav-container, #nav-container ul {
   display: flex;
 }
 
 @media (max-width: 700px) {
-  .container, #about-page, #about-page #about-photos, #projects-page, #projects-page #about-photos, #contacts #contact-items-container, #landing-projects, #nav-container, #nav-container ul {
+  .container, #about-page, #about-page #about-photos, #contacts #contact-items-container, #landing-projects, #nav-container, #nav-container ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -218,8 +218,8 @@ h3 {
 }
 #landing-projects {
   position: relative;
-  top: 35vh;
-  margin-bottom: 5rem;
+  margin-top: 35vh;
+  margin-bottom: 1rem;
 }
 #landing-projects div {
   width: 100%;
@@ -293,7 +293,7 @@ h3 {
   margin: 1rem 0 -1rem 0;
 }
 
-#about-page, #projects-page {
+#about-page {
   justify-content: space-around;
   overflow-x: hidden;
   width: 100%;
@@ -303,25 +303,25 @@ h3 {
   background-repeat: no-repeat;
   background-position: top;
 }
-#about-page h1, #projects-page h1 {
+#about-page h1 {
   font-size: 3.5rem;
   margin: 4rem 0 4.5rem 0;
   font-weight: bold;
   line-height: 0.85;
 }
-#about-page p, #projects-page p {
+#about-page p {
   font-size: 1.2rem;
   max-width: 50ch;
   margin: 1.5rem 0;
   line-height: 1.8;
 }
-#about-page #about-photos, #projects-page #about-photos {
+#about-page #about-photos {
   flex-direction: column;
   justify-content: space-evenly;
   margin: 0 1rem;
   text-align: center;
 }
-#about-page #about-photos img, #projects-page #about-photos img {
+#about-page #about-photos img {
   align-self: center;
   width: 250px;
   margin: 1rem auto;
@@ -338,8 +338,10 @@ h3 {
 }
 
 #projects-page {
+  display: flex;
   flex-direction: column;
   text-align: center;
+  padding-top: 3rem;
 }
 #projects-page img {
   margin: 1rem auto;

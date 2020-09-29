@@ -1,10 +1,12 @@
 @use 'about';
 
 #projects-page{
- @extend #about-page;
- 
+
+
+ display: flex;
  flex-direction: column;
  text-align: center;
+ padding-top: 3rem;
  img {
     margin: 1rem auto; 
     width: 250px;
