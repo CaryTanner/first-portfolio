@@ -1,7 +1,7 @@
-let nav = document.querySelector('.menu-button')
+let hamburgerBtn = document.querySelector('.menu-button')
 
 
-nav.addEventListener('click', () => {
-    nav.parentNode.classList.toggle('hide')
+hamburgerBtn.addEventListener('click', () => {
+    hamburgerBtn.parentNode.classList.toggle('hide')
 })
     

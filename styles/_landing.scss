@@ -4,7 +4,7 @@
   overflow-x: hidden;
   width: 100%;
 
-  padding: 2rem;
+  padding: 5rem 2rem 0 2rem;
   background-image: url("./images/pexels-polina-tankilevitch-4110404-blend3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -12,7 +12,7 @@
 
   #what-opener-title {
     font-size: 3rem;
-    margin: 3rem 0 3rem 0;
+    margin: 0 0 3rem 0;
     font-weight: bold;
     line-height: 0.9;
   }
@@ -31,4 +31,27 @@
     font-weight: bold;
     line-height: 0.8;
   }
+
+  
+
+}
+
+@media (max-width: 700px) {
+  #landing-container{
+    padding: 5rem .7rem 0 .7rem;
+    background-size: contain;
+    
+
+    #what-opener-title {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+    #web-opener-title{ 
+      font-size: 5rem;
+  }
+  }
+  
 }

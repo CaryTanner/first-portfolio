@@ -3,25 +3,26 @@
 @use 'container';
 
 #nav-container{
-    @extend.container; //usesflexandmediamobileposition: 
-    position: fixed;
-    z-index: 99;
-    width: 100%;
-    padding: 10px;
-    color: colors.$secondary-red;
-    background-color: colors.$background-color;
-    justify-content: space-between;
-    font-size: 1.5rem;
-    text-decoration: none;
-    border-bottom: 1px solid colors.$secondary-red;
-    // nav{
-    //     transition: all 500ms;
-    // -webkit-transition: all 500ms;
-    // -moz-transition: all 500ms;
-    // -ms-transition: all 500ms;
-    // -o-transition: all 500ms;
-    // }
-
+        @extend.container;
+        //usesflexandmediamobile
+        position: fixed;
+        z-index: 99;
+        width: 100%;
+        height: 50px;
+        overflow-x: hidden;
+        padding: 10px;
+        color: colors.$secondary-red;
+        background-color: colors.$background-color;
+        justify-content: space-between;
+        font-size: 1.5rem;
+        text-decoration: none;
+        border-bottom: 1px solid colors.$secondary-red;
+        transition: all ease-in 500ms;
+        -webkit-transition: all ease-in 500ms;
+        -moz-transition: all ease-in 500ms;
+        -ms-transition: all ease-in 500ms;
+        -o-transition: all ease-in 500ms;
+    
     a,a:visited {
         text-decoration: none;
         }
@@ -38,31 +39,44 @@
             margin: 0 15px;
             }
         }
+
     button{
         background-color: colors.$background-color;
         border: none;
         position: absolute;
-        right: 2rem;
+        right: 1rem;
+        
     }
+
     svg {
         background-color: colors.$background-color;
         cursor: pointer; 
         fill: colors.$main-red;
       }
 
-      @media (min-width: 700px) {
-          button{
-              display: none;
-          }
-      }
+      
+    //   &.hide{
+    //       transition: all 500ms      ;
+    //       -webkit-transition: all 500ms      ;
+    //       -moz-transition: all 500ms      ;
+    //       -ms-transition: all 500ms      ;
+    //       -o-transition: all 500ms      ;
+    //     }
 
-}
+        @media (min-width: 700px) {
+            button{
+                display: none;
+            }
+        }
+     
+
+    }
+
+    .hide {
+        min-height: 200px;
+        
+    }
 
 
-
-.hide {
-    height: 200px;
-    overflow: hidden;
-  }
 
 

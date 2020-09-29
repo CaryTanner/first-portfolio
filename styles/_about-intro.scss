@@ -22,19 +22,23 @@
   
   button {
     @include buttons.main-button;
-    margin: -.5rem 0 1rem 0;
     max-width: 150px;
     
   }
   
   @media (max-width: 500px) {
+    
+    h2 {
+      font-size: 3.5rem;}
     #about-intro-para::before {
       display: none;
     }
     button {
+      
       margin: 1rem auto;
 
     }
+
   }
   
 }
@@ -55,6 +59,12 @@
   shape-outside: polygon(-21px 241px, -63px 248px, 99.2% 96.8%, 296px -8px);
 }
 
+@media (max-width: 500px) { 
+  // make a container or just text and button??????
+  #landing-about {
+    align-items: center;
+  }
+}
 
 
 
