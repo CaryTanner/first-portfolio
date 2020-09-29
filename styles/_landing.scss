@@ -3,34 +3,32 @@
 #landing-container {
   overflow-x: hidden;
   width: 100%;
-  height: 220vh;
+
   padding: 2rem;
   background-image: url("./images/pexels-polina-tankilevitch-4110404-blend3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  
-}
 
-#what-opener-title {
-  font-size: 3rem;
-  margin: 3rem 0 3rem 0;
-  font-weight: bold;
-  line-height: 0.9;
-}
+  #what-opener-title {
+    font-size: 3rem;
+    margin: 3rem 0 3rem 0;
+    font-weight: bold;
+    line-height: 0.9;
+  }
 
-h3 {
-  font-size: 2.5rem;
-  line-height: 0.8;
-  margin: 0 auto;
-  color: colors.$main-grey;
-  text-decoration: line-through;
-  font-weight: 100;
-}
+  h3 {
+    font-size: 2.5rem;
+    line-height: 0.8;
+    color: colors.$main-grey;
+    text-decoration: line-through;
+    font-weight: 100;
+  }
 
-#web-opener-title {
-  margin: 5rem 0 3rem 0;
-  font-size: 7rem;
-  font-weight: bold;
-  line-height: 0.8;
+  #web-opener-title {
+    margin: 5rem 0 3rem 0;
+    font-size: 7rem;
+    font-weight: bold;
+    line-height: 0.8;
+  }
 }

@@ -7,6 +7,9 @@
 @use 'about-intro';
 @use 'project-intro';
 @use 'contacts';
+@use 'about';
+@use 'projects';
+
 
 *{
   margin: 0;
@@ -31,6 +34,9 @@ body{
 strong {
   color: colors.$secondary-red;
 }
+
+
+
 
 
 

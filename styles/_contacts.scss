@@ -1,8 +1,11 @@
-#contacts-container{
+@use 'container';
+
+
+#contacts{
     text-align: center;
     padding: 20px;
     #contact-items-container{
-        display: flex;
+        @extend .container;
         justify-content: space-evenly;
     img{
         width: 80px;

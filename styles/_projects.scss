@@ -1,0 +1,13 @@
+@use 'about';
+
+#projects-page{
+ @extend #about-page;
+ 
+ flex-direction: column;
+ text-align: center;
+ img {
+    margin: 1rem auto; 
+    width: 250px;
+ }
+
+}

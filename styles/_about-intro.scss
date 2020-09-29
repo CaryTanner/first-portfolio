@@ -1,7 +1,9 @@
 @use 'colors';
 @use 'buttons';
+@use 'container';
 
 #landing-about {
+  
   position: relative;
   top: 25vh;
   display: flex;
@@ -24,8 +26,16 @@
     max-width: 150px;
     
   }
-    
   
+  @media (max-width: 500px) {
+    #about-intro-para::before {
+      display: none;
+    }
+    button {
+      margin: 1rem auto;
+
+    }
+  }
   
 }
 
@@ -37,7 +47,7 @@
 #about-intro-para::before {
   content: "";
   width: 200px;
-  height: 50px;
+  height: 75px;
   margin: 20px;
   padding: 20px;
   border: 10px solid rgba(0, 0, 0, 0);

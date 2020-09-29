@@ -16,6 +16,17 @@ a.active {
   font-weight: bold;
 }
 
+.container, #about-page, #about-page #about-photos, #projects-page, #projects-page #about-photos, #contacts #contact-items-container, #landing-projects, #nav-container, #nav-container ul {
+  display: flex;
+}
+
+@media (max-width: 700px) {
+  .container, #about-page, #about-page #about-photos, #projects-page, #projects-page #about-photos, #contacts #contact-items-container, #landing-projects, #nav-container, #nav-container ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 #nav-container {
   position: fixed;
   z-index: 99;
@@ -23,7 +34,6 @@ a.active {
   padding: 10px;
   color: #7f1114;
   background-color: #e1e1df;
-  display: flex;
   justify-content: space-between;
   font-size: 1.5rem;
   text-decoration: none;
@@ -36,11 +46,27 @@ a.active {
   text-decoration: underline;
 }
 #nav-container ul {
-  display: flex;
   list-style: none;
 }
 #nav-container ul li {
   margin: 0 15px;
+}
+#nav-container button {
+  background-color: #e1e1df;
+  padding: 1px;
+  border: none;
+  position: absolute;
+  right: 2rem;
+}
+#nav-container svg {
+  background-color: #e1e1df;
+  cursor: pointer;
+  fill: #b42c2c;
+}
+
+.hide {
+  height: 200px;
+  overflow: hidden;
 }
 
 h1 {
@@ -58,31 +84,26 @@ h3 {
 #landing-container {
   overflow-x: hidden;
   width: 100%;
-  height: 220vh;
   padding: 2rem;
   background-image: url("./images/pexels-polina-tankilevitch-4110404-blend3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
 }
-
-#what-opener-title {
+#landing-container #what-opener-title {
   font-size: 3rem;
   margin: 3rem 0 3rem 0;
   font-weight: bold;
   line-height: 0.9;
 }
-
-h3 {
+#landing-container h3 {
   font-size: 2.5rem;
   line-height: 0.8;
-  margin: 0 auto;
   color: #94928E;
   text-decoration: line-through;
   font-weight: 100;
 }
-
-#web-opener-title {
+#landing-container #web-opener-title {
   margin: 5rem 0 3rem 0;
   font-size: 7rem;
   font-weight: bold;
@@ -133,6 +154,14 @@ h3 {
   -ms-transform: scale(1.05);
   -o-transform: scale(1.05);
 }
+@media (max-width: 500px) {
+  #landing-about #about-intro-para::before {
+    display: none;
+  }
+  #landing-about button {
+    margin: 1rem auto;
+  }
+}
 
 #about-intro-para {
   max-width: 40ch;
@@ -142,7 +171,7 @@ h3 {
 #about-intro-para::before {
   content: "";
   width: 200px;
-  height: 50px;
+  height: 75px;
   margin: 20px;
   padding: 20px;
   border: 10px solid rgba(0, 0, 0, 0);
@@ -153,7 +182,6 @@ h3 {
 #landing-projects {
   position: relative;
   top: 35vh;
-  display: flex;
   margin-bottom: 5rem;
 }
 #landing-projects div {
@@ -196,6 +224,7 @@ h3 {
 #thumbs-button {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 #thumbs-container {
@@ -204,21 +233,68 @@ h3 {
 }
 
 .project-thumbnail {
-  width: 200px;
+  width: 250px;
+  margin: 1.3rem 0;
   border: 1px solid #130a0b;
 }
 
-#contacts-container {
+@media (max-width: 1100px) {
+  #thumbs-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#contacts {
   text-align: center;
   padding: 20px;
 }
-#contacts-container #contact-items-container {
-  display: flex;
+#contacts #contact-items-container {
   justify-content: space-evenly;
 }
-#contacts-container #contact-items-container img {
+#contacts #contact-items-container img {
   width: 80px;
   margin: 1rem 0 -1rem 0;
+}
+
+#about-page, #projects-page {
+  justify-content: space-around;
+  overflow-x: hidden;
+  width: 100%;
+  padding: 2rem;
+  background-image: url("./images/pexels-polina-tankilevitch-white-wine.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+#about-page h1, #projects-page h1 {
+  font-size: 3.5rem;
+  margin: 4rem 0 4.5rem 0;
+  font-weight: bold;
+  line-height: 0.85;
+}
+#about-page p, #projects-page p {
+  font-size: 1.2rem;
+  max-width: 50ch;
+  margin: 1.5rem 0;
+  line-height: 1.8;
+}
+#about-page #about-photos, #projects-page #about-photos {
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#about-page #about-photos img, #projects-page #about-photos img {
+  align-self: center;
+  width: 250px;
+  margin: 1rem auto;
+}
+
+#projects-page {
+  flex-direction: column;
+  text-align: center;
+}
+#projects-page img {
+  margin: 1rem auto;
+  width: 250px;
 }
 
 * {
