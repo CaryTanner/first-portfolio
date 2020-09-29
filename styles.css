@@ -135,6 +135,11 @@ h3 {
     font-size: 5rem;
   }
 }
+@media (max-width: 450px) {
+  #landing-container #web-opener-title {
+    font-size: 4.3rem;
+  }
+}
 #landing-about {
   position: relative;
   top: 25vh;
@@ -313,11 +318,23 @@ h3 {
 #about-page #about-photos, #projects-page #about-photos {
   flex-direction: column;
   justify-content: space-evenly;
+  margin: 0 1rem;
+  text-align: center;
 }
 #about-page #about-photos img, #projects-page #about-photos img {
   align-self: center;
   width: 250px;
   margin: 1rem auto;
+}
+
+#cv-float {
+  position: absolute;
+  right: 5%;
+  top: 12%;
+}
+
+.download-img {
+  height: 1.5ch;
 }
 
 #projects-page {
