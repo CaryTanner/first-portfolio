@@ -1,3 +1,5 @@
+//nav hamburger menu
+
 let hamburgerBtn = document.querySelector(".menu-button");
 let nav = document.querySelector("nav");
 

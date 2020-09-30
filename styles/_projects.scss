@@ -1,15 +1,63 @@
 @use 'about';
+@use 'container';
+@use 'colors';
 
-#projects-page{
+ 
+#projects-title{
+   color: colors.$main-dark;
+   font-size: 6rem;
+   text-align: center;
+   position: relative;
+   top: 5rem;
+   // margin: 5rem auto;
+}
+
+@media (max-width: 700px) {
+   #projects-title{
+      font-size: 5.5rem;
+   }
+}
 
 
- display: flex;
- flex-direction: column;
- text-align: center;
- padding-top: 3rem;
- img {
-    margin: 1rem auto; 
-    width: 250px;
- }
+.project-container{
+   @extend .container;
+   color: colors.$main-dark;
+   margin: 7rem auto;
+   
+   // height: 400px;
 
+   .project-pic-container{
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      
+      
+   }
+   
+   .project-pic{
+      margin: 1rem .5rem;
+      height: 200px;
+      border: 1px solid colors.$main-dark;
+   }
+   .project-text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 2;
+      max-width: 800px;
+      padding: 0 1rem;
+      margin: 1rem auto;
+      text-align: left;
+      ul {
+        
+         margin: 1rem auto;
+         padding: 0 4rem;
+         
+      }
+      h2{
+         text-align: center;
+         font-size: 1.5rem;
+      }
+   }
 }

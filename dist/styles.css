@@ -16,12 +16,12 @@ a.active {
   font-weight: bold;
 }
 
-.container, #about-page, #about-page #about-photos, #contacts #contact-items-container, #landing-projects, #nav-container, #nav-container ul {
+.container, .project-container, #about-page, #about-page #about-photos, #contacts #contact-items-container, #landing-projects, #nav-container, #nav-container ul {
   display: flex;
 }
 
 @media (max-width: 700px) {
-  .container, #about-page, #about-page #about-photos, #contacts #contact-items-container, #landing-projects, #nav-container, #nav-container ul {
+  .container, .project-container, #about-page, #about-page #about-photos, #contacts #contact-items-container, #landing-projects, #nav-container, #nav-container ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -413,15 +413,51 @@ h3 {
   height: 1.5ch;
 }
 
-#projects-page {
+#projects-title {
+  color: #130a0b;
+  font-size: 6rem;
+  text-align: center;
+  position: relative;
+  top: 5rem;
+}
+
+@media (max-width: 700px) {
+  #projects-title {
+    font-size: 5.5rem;
+  }
+}
+.project-container {
+  color: #130a0b;
+  margin: 7rem auto;
+}
+.project-container .project-pic-container {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.project-container .project-pic {
+  margin: 1rem 0.5rem;
+  height: 200px;
+  border: 1px solid #130a0b;
+}
+.project-container .project-text {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  padding-top: 3rem;
-}
-#projects-page img {
+  align-items: center;
+  flex: 2;
+  max-width: 800px;
+  padding: 0 1rem;
   margin: 1rem auto;
-  width: 250px;
+  text-align: left;
+}
+.project-container .project-text ul {
+  margin: 1rem auto;
+  padding: 0 4rem;
+}
+.project-container .project-text h2 {
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 * {
