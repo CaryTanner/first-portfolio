@@ -12,17 +12,17 @@ a.active {
     font-weight: bold;
 }
 
-@mixin linx ($link, $visit, $hover, $active) {
-    a {
-      color: $link;
-      &:visited {
-        color: $visit;
-      }
-      &:hover {
-        color: $hover;   
-      }
-      &:active {
-        color: $active;
-      }
-    }
-  }
+// @mixin linx ($link, $visit, $hover, $active) {
+//     a {
+//       color: $link;
+//       &:visited {
+//         color: $visit;
+//       }
+//       &:hover {
+//         color: $hover;   
+//       }
+//       &:active {
+//         color: $active;
+//       }
+//     }
+//   }

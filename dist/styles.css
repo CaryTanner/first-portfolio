@@ -66,12 +66,12 @@ a.active {
 #nav-container button:focus {
   outline: none;
 }
-
 @media (min-width: 700px) {
-  button {
+  #nav-container button {
     display: none;
   }
 }
+
 @media (max-width: 700px) {
   nav {
     height: 0;
@@ -370,7 +370,7 @@ h3 {
 }
 #contacts #contact-items-container img {
   width: 80px;
-  margin: 1rem 0 -1rem 0;
+  margin: 2rem 0 -1rem 0;
 }
 
 #about-page {
@@ -378,10 +378,6 @@ h3 {
   overflow-x: hidden;
   width: 100%;
   padding: 2rem;
-  background-image: url("./images/pexels-polina-tankilevitch-white-wine.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
 }
 #about-page h1 {
   font-size: 3.5rem;
