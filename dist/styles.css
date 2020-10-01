@@ -470,6 +470,15 @@ h3 {
   text-align: center;
   font-size: 1.5rem;
 }
+.project-container .project-text a {
+  text-decoration: underline;
+  color: #7f1114;
+}
+.project-container .project-text .seperate-links {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem auto;
+}
 
 * {
   margin: 0;
