@@ -17,11 +17,22 @@
   }
 
   h3 {
-    font-size: 2.5rem;
     line-height: 0.8;
     color: colors.$main-grey;
     text-decoration: line-through;
     font-weight: 100;
+    &:nth-child(2) {
+      font-size: 1.9rem;
+    }
+    &:nth-child(3) {
+      font-size: 2.2rem;
+    }
+    &:nth-child(4) {
+      font-size: 2.4rem;
+    }
+    &:nth-child(5) {
+      font-size: 2.6rem;
+    }
   }
 
   #web-opener-title {
@@ -30,16 +41,12 @@
     font-weight: bold;
     line-height: 0.8;
   }
-
-  
-
 }
 
 @media (max-width: 700px) {
-  #landing-container{
-    padding: 5rem .7rem 0 .7rem;
+  #landing-container {
+    padding: 5rem 0.7rem 0 0.7rem;
     background-size: contain;
-    
 
     #what-opener-title {
       font-size: 2rem;
@@ -48,18 +55,15 @@
     h3 {
       font-size: 1.5rem;
     }
-    #web-opener-title{ 
+    #web-opener-title {
       font-size: 5rem;
+    }
   }
-  }
-  
 }
 @media (max-width: 450px) {
-  #landing-container{
-    
-    #web-opener-title{ 
+  #landing-container {
+    #web-opener-title {
       font-size: 4.3rem;
+    }
   }
-  }
-
 }
