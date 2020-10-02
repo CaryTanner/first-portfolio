@@ -424,6 +424,15 @@ h3 {
   height: 1.5ch;
 }
 
+#rock-container {
+  width: 100%;
+  display: flex;
+}
+#rock-container img {
+  width: 200px;
+  margin: 0 auto;
+}
+
 #projects-title {
   color: #130a0b;
   font-size: 6rem;

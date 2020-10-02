@@ -9,13 +9,7 @@
 
   padding: 2rem;
 
-  // // ** remove background ?? ***// 
-
-  // background-image: url("./images/pexels-polina-tankilevitch-white-wine.jpg");
-  // background-size: cover;
-  // background-repeat: no-repeat;
-  // background-position: top;
-
+  
   h1 {
     font-size: 3.5rem;
     margin: 4rem 0 4.5rem 0;
@@ -29,6 +23,7 @@
     margin: 1.5rem 0;
     line-height: 1.8;
   }
+  
   #about-photos {
       @extend .container;
       flex-direction: column;
@@ -54,5 +49,15 @@
 .download-img{
   height: 1.5ch;
 }
+#rock-container{
+  width: 100%;
+  display: flex;
+
+  img{
+    width: 200px;
+    margin: 0 auto;
+  }
+}
+
 
 
