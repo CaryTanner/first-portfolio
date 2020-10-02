@@ -16,12 +16,12 @@ a.active {
   font-weight: bold;
 }
 
-.container, #about-page, #about-page #about-photos, #contacts #contact-items-container, #landing-projects, #nav-container, #nav-container ul {
+.container, .project-container, #about-page, #about-page #about-photos, #contacts #contact-items-container, #landing-projects, #nav-container, #nav-container ul {
   display: flex;
 }
 
 @media (max-width: 700px) {
-  .container, #about-page, #about-page #about-photos, #contacts #contact-items-container, #landing-projects, #nav-container, #nav-container ul {
+  .container, .project-container, #about-page, #about-page #about-photos, #contacts #contact-items-container, #landing-projects, #nav-container, #nav-container ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -31,8 +31,7 @@ a.active {
   position: fixed;
   z-index: 99;
   width: 100%;
-  height: 50px;
-  overflow-x: hidden;
+  height: fit-content;
   padding: 10px;
   color: #7f1114;
   background-color: #e1e1df;
@@ -40,13 +39,13 @@ a.active {
   font-size: 1.5rem;
   text-decoration: none;
   border-bottom: 1px solid #7f1114;
-  transition: all ease-in 500ms;
-  -webkit-transition: all ease-in 500ms;
-  -moz-transition: all ease-in 500ms;
-  -ms-transition: all ease-in 500ms;
-  -o-transition: all ease-in 500ms;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
-#nav-container a, #nav-container a:visited {
+#nav-container a,
+#nav-container a:visited {
   text-decoration: none;
 }
 #nav-container a:hover {
@@ -64,10 +63,8 @@ a.active {
   position: absolute;
   right: 1rem;
 }
-#nav-container svg {
-  background-color: #e1e1df;
-  cursor: pointer;
-  fill: #b42c2c;
+#nav-container button:focus {
+  outline: none;
 }
 @media (min-width: 700px) {
   #nav-container button {
@@ -75,8 +72,91 @@ a.active {
   }
 }
 
+@media (max-width: 700px) {
+  nav {
+    height: 0;
+    overflow-x: hidden;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+  }
+}
 .hide {
-  min-height: 200px;
+  height: 125px;
+}
+
+#nav-burger {
+  width: 45px;
+  height: 30px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-burger span {
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background: #7f1114;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-burger span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-burger span:nth-child(2),
+#nav-burger span:nth-child(3) {
+  top: 12px;
+}
+
+#nav-burger span:nth-child(4) {
+  top: 24px;
+}
+
+#nav-burger.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-burger.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-burger.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-burger.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
 }
 
 h1 {
@@ -107,11 +187,22 @@ h3 {
   line-height: 0.9;
 }
 #landing-container h3 {
-  font-size: 2.5rem;
   line-height: 0.8;
   color: #94928E;
   text-decoration: line-through;
   font-weight: 100;
+}
+#landing-container h3:nth-child(2) {
+  font-size: 1.9rem;
+}
+#landing-container h3:nth-child(3) {
+  font-size: 2.2rem;
+}
+#landing-container h3:nth-child(4) {
+  font-size: 2.4rem;
+}
+#landing-container h3:nth-child(5) {
+  font-size: 2.6rem;
 }
 #landing-container #web-opener-title {
   margin: 5rem 0 3rem 0;
@@ -290,7 +381,7 @@ h3 {
 }
 #contacts #contact-items-container img {
   width: 80px;
-  margin: 1rem 0 -1rem 0;
+  margin: 2rem 0 -1rem 0;
 }
 
 #about-page {
@@ -298,10 +389,6 @@ h3 {
   overflow-x: hidden;
   width: 100%;
   padding: 2rem;
-  background-image: url("./images/pexels-polina-tankilevitch-white-wine.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
 }
 #about-page h1 {
   font-size: 3.5rem;
@@ -337,15 +424,69 @@ h3 {
   height: 1.5ch;
 }
 
-#projects-page {
+#rock-container {
+  width: 100%;
+  display: flex;
+}
+#rock-container img {
+  width: 200px;
+  margin: 0 auto;
+}
+
+#projects-title {
+  color: #130a0b;
+  font-size: 6rem;
+  text-align: center;
+  position: relative;
+  top: 5rem;
+}
+
+@media (max-width: 700px) {
+  #projects-title {
+    font-size: 5.5rem;
+  }
+}
+.project-container {
+  color: #130a0b;
+  margin: 7rem auto;
+}
+.project-container .project-pic-container {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.project-container .project-pic {
+  margin: 1rem 0.5rem;
+  height: 200px;
+  border: 1px solid #130a0b;
+}
+.project-container .project-text {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  padding-top: 3rem;
-}
-#projects-page img {
+  align-items: center;
+  flex: 2;
+  max-width: 800px;
+  padding: 0 1rem;
   margin: 1rem auto;
-  width: 250px;
+  text-align: left;
+}
+.project-container .project-text ul {
+  margin: 1rem auto;
+  padding: 0 4rem;
+}
+.project-container .project-text h2 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.project-container .project-text a {
+  text-decoration: underline;
+  color: #7f1114;
+}
+.project-container .project-text .seperate-links {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem auto;
 }
 
 * {
