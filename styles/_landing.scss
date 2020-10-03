@@ -65,5 +65,20 @@
     #web-opener-title {
       font-size: 3.8rem;
     }
+    h3 {
+    
+    &:nth-child(2) {
+      font-size: 1.6rem;
+    }
+    &:nth-child(3) {
+      font-size: 1.8rem;
+    }
+    &:nth-child(4) {
+      font-size: 2rem;
+    }
+    &:nth-child(5) {
+      font-size: 2.2rem;
+    }
+  }
   }
 }
