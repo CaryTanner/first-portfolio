@@ -31,7 +31,7 @@ a.active {
   position: fixed;
   z-index: 99;
   width: 100%;
-  height: fit-content;
+  height: auto;
   padding: 10px;
   color: #7f1114;
   background-color: #e1e1df;
