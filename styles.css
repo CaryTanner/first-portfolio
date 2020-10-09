@@ -265,26 +265,20 @@ h3 {
   font-family: inherit;
   color: #b42c2c;
   border: 1px solid #b42c2c;
-  background-color: #e1e1df;
-  transition: all ease-in 100ms;
-  -webkit-transition: all ease-in 100ms;
-  -moz-transition: all ease-in 100ms;
-  -ms-transition: all ease-in 100ms;
-  -o-transition: all ease-in 100ms;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  background-image: linear-gradient(90deg, #e1e1df 0%, #e1e1df 50%, #fdfdfb 50%, #fdfdfb 100%);
+  background-size: 200%;
+  transition: background-position 0.3s cubic-bezier(0.47, 0.1, 1, 0.63), color 0.2s linear;
+  transition-delay: 0s, 0.15s;
   max-width: 150px;
 }
 #landing-about button:hover {
-  background-color: #fdfdfb;
-  transform: scale(1.05);
-  -webkit-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  -o-transform: scale(1.05);
+  cursor: pointer;
+  background-position: -100% 100%;
 }
 @media (max-width: 500px) {
   #landing-about h2 {
@@ -334,26 +328,20 @@ h3 {
   font-family: inherit;
   color: #b42c2c;
   border: 1px solid #b42c2c;
-  background-color: #e1e1df;
-  transition: all ease-in 100ms;
-  -webkit-transition: all ease-in 100ms;
-  -moz-transition: all ease-in 100ms;
-  -ms-transition: all ease-in 100ms;
-  -o-transition: all ease-in 100ms;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  background-image: linear-gradient(90deg, #e1e1df 0%, #e1e1df 50%, #fdfdfb 50%, #fdfdfb 100%);
+  background-size: 200%;
+  transition: background-position 0.3s cubic-bezier(0.47, 0.1, 1, 0.63), color 0.2s linear;
+  transition-delay: 0s, 0.15s;
   margin: 2rem auto;
 }
 #landing-projects div button:hover {
-  background-color: #fdfdfb;
-  transform: scale(1.05);
-  -webkit-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  -o-transform: scale(1.05);
+  cursor: pointer;
+  background-position: -100% 100%;
 }
 #landing-projects h2 {
   font-size: 4.5rem;
