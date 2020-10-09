@@ -7,25 +7,26 @@
     font-family: inherit;
     color: colors.$main-red;
     border: 1px solid colors.$main-red;
-    background-color: colors.$background-color;
-    transition: all ease-in 100ms;
-    -webkit-transition: all ease-in 100ms;
-    -moz-transition: all ease-in 100ms;
-    -ms-transition: all ease-in 100ms;
-    -o-transition: all ease-in 100ms;
+    
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    background-image: linear-gradient(90deg,
+    (colors.$background-color) 0%,
+    (colors.$background-color) 50%,
+    (#fdfdfb) 50%,
+   ( #fdfdfb) 100%);
+background-size: 200%;
+transition: background-position .3s cubic-bezier(.47, .1, 1, .63),
+  color .2s linear;
+transition-delay: 0.0s, 0.15s;
 
     &:hover {
+        
+        cursor: pointer;
+        background-position: -100% 100%;
     
-    background-color: #fdfdfb;
-    transform:   scale(1.05) ;
-    -webkit-transform:   scale(1.05) ;
-    -moz-transform:   scale(1.05) ;
-    -ms-transform:   scale(1.05) ;
-    -o-transform:   scale(1.05) ;
     }
 }
